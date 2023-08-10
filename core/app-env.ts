@@ -4,7 +4,7 @@ dotEnvConfig({
 });
 
 const appEnv = {
-  MONGODB_URI: Deno.env.get("MONGODB_URI"),
+  // MONGODB_URI: Deno.env.get("MONGODB_URI"),
 };
 const everyEnvVariableFilled = Object.values(appEnv).every(
   (v) => v !== null && v !== undefined && v !== "" && !Number.isNaN(v)
