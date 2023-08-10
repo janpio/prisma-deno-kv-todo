@@ -1,13 +1,11 @@
-import { ObjectId } from "mongo";
-
 export interface Todo {
-  _id: ObjectId;
+  id: string;
   name: string;
   done: boolean;
 }
 
-export type NewTodo = Omit<Todo, "_id">;
+export type NewTodo = Omit<Todo, "id">;
 
 export function isNewTodo(item: any): item is NewTodo {
-  return Boolean(item?.name) && !item._id;
+  return Boolean(item?.name) && !item.id;
 }

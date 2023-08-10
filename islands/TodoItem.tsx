@@ -23,7 +23,7 @@ export default function TodoItem(props: TodoItemProps) {
     useToggleTodoState(onStatusUpdated);
 
   const toggleState = useCallback(() => {
-    toggleTodoState(value._id.toString());
+    toggleTodoState(value.id);
   }, [value]);
 
   return (
